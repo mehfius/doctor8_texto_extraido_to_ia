@@ -21,7 +21,7 @@ functions.http('texto_extraido_to_ia', async (req, res) => {
                     action: 'select_texto_extraido'
                 }
             });
-            
+            console.log(texto_extraido.d)
             let prompt = await get_prompt();
        
             let ia = await fetch_ia(prompt, texto_extraido.d);                
